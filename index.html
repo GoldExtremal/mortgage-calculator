@@ -1,14 +1,64 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ипотечный калькулятор</title>
     <link rel="shortcut icon" href="img/calculator.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
+    <div class="page">
+        <h1>Ипотечный калькулятор</h1>
+
+        <p class="description">С помощью этого калькулятора вы можете быстро и удобно рассчитать
+            сумму ежемесячного платежа, размер переплаты и общую стоимость
+            кредита.
+        </p>
+
+        <div class="calculator">
+            <form action="" method="" class="calculator-form">
+                <div class="form-field">
+                    <label for="apartment-price" class="form-label">Стоимость недвижимости</label>
+                    <input type="text" maxlength="10" name="" id="apartment-price">
+                </div>
+
+                <div class="form-field">
+                    <label for="initial-payment" class="form-label">Первоначальный взнос</label>
+                    <input type="text" maxlength="10" name="" id="initial-payment">
+
+                    <select class="initial-payment-type">
+                        <option class="initial-payment-type__rubles" selected>₽</option>
+                        <option class="initial-payment-type__percent">%</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="loan-term" class="form-label">Срок кредита</label>
+                    <input type="number" min="0" max="360" name="" id="loan-term">
+
+                    <select>
+                        <option class="loan-term__years" selected>лет</option>
+                        <option class="loan-term__months">месяцев</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="interest-rate" class="form-label">Процентная ставка</label>
+                    <input type="number" min="0" max="200" step="0.1" name="" id="interest-rate">
+                </div>
+
+                <button type="button" class="form-btn">Рассчитать</button>
+            </form>
+
+            <div class="calculator-results">
+                
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
